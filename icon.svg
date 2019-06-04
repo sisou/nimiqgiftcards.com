@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Layer_1"
+   data-name="Layer 1"
+   viewBox="0 0 16 16"
+   version="1.1"
+   sodipodi:docname="icon.svg"
+   inkscape:version="0.92.4 (unknown)">
+  <metadata
+     id="metadata1035">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>nimiq_signet_rgb_16x16</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="977"
+     id="namedview1033"
+     showgrid="false"
+     borderlayer="true"
+     inkscape:showpageshadow="false"
+     inkscape:zoom="11.313709"
+     inkscape:cx="-10.851747"
+     inkscape:cy="2.455657"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1" />
+  <defs
+     id="defs1026">
+    <style
+       id="style1019">.cls-1{fill:url(#radial-gradient);}</style>
+    <radialGradient
+       id="radial-gradient"
+       cx="12.02"
+       cy="14.85"
+       r="15.87"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#ec991c"
+         id="stop1021" />
+      <stop
+         offset="1"
+         stop-color="#e9b213"
+         id="stop1023" />
+    </radialGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#radial-gradient"
+       id="linearGradient1047"
+       x1="39.09449"
+       y1="40.049034"
+       x2="15.519328"
+       y2="22.515749"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.59623024,0,0,0.59623024,-10.806075,-8.7135494)" />
+  </defs>
+  <title
+     id="title1028">nimiq_signet_rgb_16x16</title>
+  <rect
+     style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.74096036;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:158.74015808;stroke-opacity:1"
+     id="rect821"
+     width="22.132044"
+     height="22.132044"
+     x="-3.0561733"
+     y="-3.0297041"
+     ry="0"
+     inkscape:export-xdpi="624.60999"
+     inkscape:export-ydpi="624.60999" />
+  <rect
+     style="opacity:1;vector-effect:none;fill:url(#linearGradient1047);fill-opacity:1;stroke:none;stroke-width:1.25208342;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:158.74015808;stroke-opacity:1"
+     id="rect1037"
+     width="14.056227"
+     height="10.453876"
+     x="-1.5529817"
+     y="4.7110205"
+     ry="0.91339612"
+     transform="rotate(-16.053745)" />
+  <g
+     id="g1091"
+     transform="matrix(1.6556475,0,0,1.6556475,3.3931859,-4.4225581)">
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;fill-opacity:0.78285714;stroke-width:0.2109082"
+       id="path1030"
+       d="M 4.1945677,6.0670694 3.1908506,5.1074262 A 0.28261698,0.28261698 0 0 0 2.9174173,5.0405974 l -1.35088,0.3849171 A 0.28261698,0.28261698 0 0 0 1.3693939,5.6264279 l -0.3471627,1.34456 a 0.27418065,0.27418065 0 0 0 0.07629,0.2677423 l 1.0037173,0.9596431 a 0.28261698,0.28261698 0 0 0 0.2734333,0.066829 L 3.7265513,7.8802849 A 0.28261698,0.28261698 0 0 0 3.923695,7.6793714 L 4.2708577,6.3348115 a 0.27418065,0.27418065 0 0 0 -0.07629,-0.2677421 z"
+       class="cls-1" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;fill-opacity:0.49142858;stroke-width:0.2109082"
+       id="path1030-3"
+       d="M 4.7237179,7.742784 3.7200007,6.7831409 A 0.28261698,0.28261698 0 0 0 3.4465675,6.7163121 l -1.35088,0.3849171 A 0.28261698,0.28261698 0 0 0 1.898544,7.3021426 L 1.5513814,8.6467025 a 0.27418065,0.27418065 0 0 0 0.07629,0.2677422 L 2.6313888,9.8740879 A 0.28261698,0.28261698 0 0 0 2.904822,9.9409167 L 4.2557014,9.5559995 A 0.28261698,0.28261698 0 0 0 4.4528452,9.3550859 L 4.8000079,8.0105262 A 0.27418065,0.27418065 0 0 0 4.7237179,7.742784 Z"
+       class="cls-1" />
+  </g>
+</svg>

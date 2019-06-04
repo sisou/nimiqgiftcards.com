@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="noindex">
+
+    <title>Done! • Nimiq Gift Cards</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@nimiq/style@v0.7.3/nimiq-style.min.css">
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        * {
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 480px) {
+            html {
+                font-size: 7px;
+            }
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            padding: 0 3rem;
+            min-width: 320px;
+            max-width: 60rem;
+            margin: auto;
+        }
+
+        header {
+            padding-top: 3rem;
+        }
+
+        .headline {
+            font-size: 5.5rem;
+        }
+
+        .about {
+            font-size: 2.75rem;
+            font-weight: normal;
+            line-height: 1.5;
+        }
+
+        main {
+            max-width: 100%;
+        }
+
+        .order-details {
+            line-height: 1.8;
+        }
+
+        .order-details label {
+            display: inline-block;
+            width: 12rem;
+        }
+
+        .order-details span {
+            font-family: monospace;
+            font-size: 1.875rem;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom: 3rem;
+            width: 100%;
+            opacity: 0.7;
+        }
+
+        footer img {
+            margin-left: 1rem;
+            vertical-align: middle;
+            height: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    </header>
+
+    <main>
+        <h1 class="headline nq-green">Awesome! 💝</h1>
+        <p class="about">
+            <strong>You just bought a gift card with Nimiq!</strong><br>
+            <small>Check your email for a message from Bidali.</small>
+        </p>
+
+        <div class="order-details nq-text">
+            <strong>Your order details:</strong><br>
+            <label>Giftcard:</label> <span id="description"></span><br>
+            <label>Value:</label> <span id="amount"></span><br>
+            <label>Charge ID:</label> <span id="chargeId"></span><br>
+        </div>
+
+        <a href="/" class="nq-button-s" style="line-height: 2em">Buy another gift card</a>
+    </main>
+
+    <footer>
+        <small>Powered by</small>
+        <a href="https://giftcards.bidali.com?r=7xUnj9bey">
+            <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTQxcHgiIGhlaWdodD0iMzJweCIgdmlld0JveD0iMCAwIDE0MSAzMiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggNDkuMiAoNTExNjApIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPgogICAgPHRpdGxlPkxvZ28gLyBIb3Jpem9udGFsIC8gQ29sb3VyPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IkxvZ28tLy1Ib3Jpem9udGFsLS8tQ29sb3VyIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iR3JvdXAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMDAwMDAwLCAtMS4wMDAwMDApIj4KICAgICAgICAgICAgPGcgaWQ9IkNpcmNsZXMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMDAwMDAwLCAxLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbCIgZmlsbD0iIzRCNERGMSIgY3g9IjEwIiBjeT0iMTAiIHI9IjEwIj48L2NpcmNsZT4KICAgICAgICAgICAgICAgIDxjaXJjbGUgaWQ9Ik92YWwtQ29weSIgZmlsbD0iI0U0NTE3RiIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBtdWx0aXBseTsiIGN4PSIxMCIgY3k9IjIyIiByPSIxMCI+PC9jaXJjbGU+CiAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPHBhdGggZD0iTTMyLjM1NDcyMDgsMzMuMTExNDM1NyBMMjUsMzMuMTExNDM1NyBMMjUsMC45MzQ1MzIyMTEgTDMwLjYwNzk3NDYsMC45MzQ1MzIyMTEgQzM0LjY1MzA5MTMsMC45MzQ1MzIyMTEgMzcuNzAyMjA1NSwxLjY3NzY1ODAzIDM5Ljc1NTQwODYsMy4xNjM5MzE5NSBDNDEuODA4NjExOCw0LjY1MDIwNTg4IDQyLjgzNTE5NzksNi43NDE2ODM2OSA0Mi44MzUxOTc5LDkuNDM4NDI4MTQgQzQyLjgzNTE5NzksMTIuNTAyOTEwNSA0MS41NDgxMzQ3LDE0Ljc1NTI3MTIgMzguOTczOTY5NSwxNi4xOTU1Nzc5IEM0Mi43MTI2MzgsMTcuNjA1MjM5NyA0NC41ODE5NDQxLDIwLjI1NTk3NzIgNDQuNTgxOTQ0MSwyNC4xNDc4Njk3IEM0NC41ODE5NDQxLDI2LjkwNTkwMzggNDMuNTcwNjgwMSwyOS4wODkzMTQ3IDQxLjU0ODEyMTgsMzAuNjk4MTY4IEMzOS41MjU1NjM1LDMyLjMwNzAyMTIgMzYuNDYxMTI3MSwzMy4xMTE0MzU3IDMyLjM1NDcyMDgsMzMuMTExNDM1NyBaIE0zMi4zNjQ4NzE3LDMwLjk3MDk4MDIgQzMzLjgwNTE3ODQsMzAuOTcwOTgwMiA0MS40Mjg1OTkxLDMwLjY3MjcyNSA0Mi4zNzQzMzY4LDI0LjQyNTU3ODUgQzQyLjc1NDk2NDIsMjEuOTExMzEzNSA0MS40NTg4OTA1LDE5LjExNzY0MiAzNy4yMTI4NTYsMTcuNTA1MzE4NCBMMzQuNDczMDcyOSwxNi40NzMzMTA3IEwzNy44NzUzODExLDE0LjY2MzEzNDMgQzM5Ljk4OTg3MzksMTMuNDk4NjMxIDQwLjkzODg4NzcsMTAuOTk0NjYyMyA0MC43ODA3NjI3LDkuMDEzMTE4MzEgQzQwLjQ2ODY2NjQsNS4xMDIwODA0IDM3LjYwMjM5NDUsMy4wODgwMjI2MiAzMC4zNzAyMTYyLDMuMDg4MDIyNjIgTDI3LjEyOTU3MywzLjA4ODAyMjYyIEwyNy4xMjk1NzMsMzAuOTcwOTgwMiBMMzIuMzY0ODcxNywzMC45NzA5ODAyIFogTTUyLjkxMDIyOTUsMzMuMTE0NDM3OSBMNTAuNzg5MDQ3OSwzMy4xMTQ0Mzc5IEw1MC43ODkwNDc5LDAuOTM0NTMyMjExIEw1Mi45MTAyMjk1LDAuOTM0NTMyMjExIEw1Mi45MTAyMjk1LDMzLjExNDQzNzkgWiBNNjYuNTA4MjA1NSwzMy4xMTE0MzU3IEw2MS41NzE5NjE2LDMzLjExMTQzNTcgTDYxLjU3MTk2MTYsMC45MzQ1MzIyMTEgTDY2LjUwODIwNTUsMC45MzQ1MzIyMTEgQzcwLjkyMTA2MDEsMC45MzQ1MzIyMTEgNzQuNjU5NjcyNCwyLjU1ODY4MzQ4IDc3LjcyNDE1NDgsNS44MDcwMzQ3NCBDODAuNzg4NjM3MSw5LjA1NTM4NjAxIDgyLjMyMDg1NTMsMTIuNzkzOTk4NCA4Mi4zMjA4NTUzLDE3LjAyMjk4NCBDODIuMzIwODU1MywyMS4yNTE5Njk2IDgwLjc4ODYzNzEsMjQuOTkwNTgxOSA3Ny43MjQxNTQ4LDI4LjIzODkzMzIgQzc0LjY1OTY3MjQsMzEuNDg3Mjg0NSA3MC45MjEwNjAxLDMzLjExMTQzNTcgNjYuNTA4MjA1NSwzMy4xMTE0MzU3IFogTTY2LjM2NzYzMSwzMC45NDI2NTkzIEM2OC40ODYxODExLDMwLjk0MjY1OTMgNzEuOTA1Njk3MywzMC40MjMxNTE5IDc0Ljg2ODQ4NDcsMjcuNzEwMTQ1MiBDNzcuNTE5OTI2OCwyNS4yODIyMzU1IDc5Ljg0ODg5NTQsMjAuODgzMjAxMyA3OS44NDg4OTU0LDE3LjAxMDIyNzQgQzc5Ljg0ODg5NTQsMTIuOTMxODM0NSA3Ny43MTYyMTc5LDguNzc2NDI4MzcgNzQuODY4NDg0Nyw2LjMyMDY2Nzc3IEM3MS45OTAwNjY5LDMuODM4NDQ2MDcgNjguMzg1NjIzLDMuMDc3Nzk1NjMgNjYuMzY3NjMxLDMuMDc3Nzk1NjMgTDYzLjY5OTU2NzgsMy4wNzc3OTU2MyBMNjMuNjk5NTY3OCwzMC45NDI2NTkzIEw2Ni4zNjc2MzEsMzAuOTQyNjU5MyBaIE05MC41MzA4NTA0LDMwLjk3MTI0MjQgTDEwNi4xMjM0NjMsMzAuOTcxMjQyNCBMOTcuMDIxMjQ5Myw2LjMzNjY2MzgyIEw4Ny4zMDU1NDc3LDMzLjExMTQzNTcgTDg1LjE4OTA4NjIsMzMuMTExNDM1NyBMOTcuMDIxMjQ5MywwLjg4NTU0OTU1NyBMMTA4Ljg1MzQxMiwzMy4xMTE0MzU3IEw5MC41MzA4NTA0LDMzLjExMTQzNTcgTDkwLjUzMDg1MDQsMzAuOTcxMjQyNCBaIE0xMzMuNTE5MTk2LDMwLjk0MTQ3OTIgTDEzMy41MTkxOTYsMzMuMTExNDM1NyBMMTE0LjE4Mjg1MiwzMy4xMTE0MzU3IEwxMTQuMTgyODUyLDAuOTM0NTMyMjExIEwxMTYuMzI0NjE4LDAuOTM0NTMyMjExIEwxMTYuMzI0NjE4LDMwLjk0MTQ3OTIgTDEzMy41MTkxOTYsMzAuOTQxNDc5MiBaIE0xNDAuOTY4NTAyLDMzLjExNDQzNzkgTDEzOC45MDYyMzgsMzMuMTE0NDM3OSBMMTM4LjkwNjIzOCwwLjkzNDUzMjIxMSBMMTQwLjk2ODUwMiwwLjkzNDUzMjIxMSBMMTQwLjk2ODUwMiwzMy4xMTQ0Mzc5IFoiIGlkPSJCSURBTEkiIGZpbGw9IiM3MTcxODMiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==" alt="Bidali">
+        </a>
+    </footer>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:400,600,700">
+
+    <!-- <script type="text/javascript" src="https://commerce.bidali.com/commerce.min.js"></script> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@nimiq/hub-api@v1/dist/standalone/HubApi.standalone.umd.js"></script>
+    <script type="text/javascript">
+        /** @type {HTMLElement} */
+        const $description = document.getElementById('description');
+        /** @type {HTMLElement} */
+        const $amount = document.getElementById('amount');
+        /** @type {HTMLElement} */
+        const $chargeId = document.getElementById('chargeId');
+
+        let receivedResponse = false;
+
+        /**
+         * @param {HubApi.SignedTransaction} result
+         * @param {any} paymentRequest
+         */
+        function onSuccess(result, paymentRequest) {
+            receivedResponse = true;
+            $description.textContent = paymentRequest.description;
+            $amount.textContent = `${paymentRequest.amount} NIM`;
+            $chargeId.textContent = paymentRequest.chargeId;
+        }
+
+        /**
+         * @param {Error} error
+         * @param {any} paymentRequest
+         */
+        function onError(error, paymentRequest) {
+            receivedResponse = true;
+            const params = new URLSearchParams();
+            params.set('error', error.message);
+            window.location.href = `/#${params.toString()}`;
+        }
+
+        // Listen for Hub redirect result
+        const hub = new HubApi('https://hub.nimiq.com');
+        hub.on(HubApi.RequestType.CHECKOUT, onSuccess, onError);
+        hub.checkRedirectResponse();
+
+        if (!receivedResponse) {
+            window.location.href = '/';
+        }
+    </script>
+</body>
+</html>
