@@ -1,0 +1,102 @@
+html, body {
+    height: 100%;
+}
+
+* {
+    flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 7px;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 3rem;
+    min-width: 320px;
+    max-width: 60rem;
+    margin: auto;
+}
+
+body.home {
+    text-align: center;
+}
+
+header {
+    width: 100%;
+    padding-top: 3rem;
+}
+
+.headline {
+    font-size: 5.5rem;
+}
+
+.about {
+    font-size: 2.75rem;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+main {
+    max-width: 100%;
+}
+
+.nq-button {
+    width: 39.75rem;
+    margin: 4rem auto;
+}
+
+.minimum-value {
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+.order-details {
+    line-height: 1.8;
+}
+
+.order-details label {
+    display: inline-block;
+    width: 12rem;
+}
+
+.order-details span {
+    font-family: monospace;
+    font-size: 1.875rem;
+}
+
+#error-container {
+    padding: 1.25rem 1rem;
+    border-radius: .5rem;
+    display: none;
+}
+
+#error-container .close {
+    float: right;
+    font-weight: bold;
+    width: 1.25em;
+    text-align: center;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 3rem;
+    width: 100%;
+    opacity: 0.7;
+}
+
+footer img {
+    margin-left: 1rem;
+    vertical-align: middle;
+    height: 2rem;
+}
