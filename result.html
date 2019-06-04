@@ -19,13 +19,13 @@
         <h1 class="headline nq-green">Awesome! 💝</h1>
         <p class="about">
             <strong>You just bought a gift card with Nimiq!</strong><br>
-            <small>Check your email for a message from Bidali.</small>
+            <small>Check your email for a message from Bidali in the next 45 minutes.</small><br>
         </p>
 
         <div class="order-details nq-text">
             <strong>Your order details:</strong><br>
             <label>Giftcard:</label> <span id="description"></span><br>
-            <label>Value:</label> <span id="amount"></span><br>
+            <label>Payment:</label> <span id="amount"></span><br>
             <label>Charge ID:</label> <span id="chargeId"></span><br>
         </div>
 
@@ -79,6 +79,14 @@
         const hub = new HubApi('https://hub.nimiq.com');
         hub.on(HubApi.RequestType.CHECKOUT, onSuccess, onError);
         hub.checkRedirectResponse();
+
+        // Uncomment to test this page
+        // onSuccess(null, {
+        //     description: '$50 USD Amazon.com',
+        //     amount: 32240,
+        //     chargeId: 'klgsdIas9',
+        // });
+        // onError(new Error('Uh oh, that went wrong!'));
 
         if (!receivedResponse) {
             window.location.href = '/';
