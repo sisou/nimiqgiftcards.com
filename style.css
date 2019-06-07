@@ -15,22 +15,19 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
     width: 100%;
     padding: 0 3rem;
     min-width: 320px;
-    max-width: 60rem;
     margin: auto;
-}
-
-body.home {
-    text-align: center;
 }
 
 header {
     width: 100%;
     padding-top: 3rem;
+}
+
+#logo {
+    height: 3rem;
 }
 
 .headline {
@@ -44,7 +41,18 @@ header {
 }
 
 main {
-    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+    flex-grow: 1;
+    max-width: 60rem;
+    margin: auto;
+}
+
+main.home {
+    align-items: center;
+    text-align: center;
 }
 
 .nq-button {
@@ -72,8 +80,10 @@ main {
 }
 
 #error-container {
+    align-self: center;
     padding: 1.25rem 1rem;
     border-radius: .5rem;
+    margin-top: 2rem;
     display: none;
 }
 
