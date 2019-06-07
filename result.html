@@ -41,7 +41,6 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:400,600,700">
 
-    <!-- <script type="text/javascript" src="https://commerce.bidali.com/commerce.min.js"></script> -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@nimiq/hub-api@v1/dist/standalone/HubApi.standalone.umd.js"></script>
     <script type="text/javascript">
         /** @type {HTMLElement} */
@@ -59,6 +58,8 @@
          */
         function onSuccess(result, paymentRequest) {
             receivedResponse = true;
+
+            // Display payment information to the user
             $description.textContent = paymentRequest.description;
             $amount.textContent = `${paymentRequest.amount} NIM`;
             $chargeId.textContent = paymentRequest.chargeId;
@@ -70,12 +71,14 @@
          */
         function onError(error, paymentRequest) {
             receivedResponse = true;
+
+            // Encode the error in the URL hash and redirect to the home page
             const params = new URLSearchParams();
             params.set('error', error.message);
             window.location.href = `/#${params.toString()}`;
         }
 
-        // Listen for Hub redirect result
+        // Listen for Nimiq Hub redirect response
         const hub = new HubApi('https://hub.nimiq.com');
         hub.on(HubApi.RequestType.CHECKOUT, onSuccess, onError);
         hub.checkRedirectResponse();
@@ -88,6 +91,7 @@
         // });
         // onError(new Error('Uh oh, that went wrong!'));
 
+        // Redirect to home page when no response was received
         if (!receivedResponse) {
             window.location.href = '/';
         }

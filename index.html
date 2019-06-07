@@ -42,35 +42,48 @@
         /** @type {HTMLButtonElement} */
         const $button = document.getElementById('buy');
 
+        // All scripts are loaded at this point, so we can enable the button
         $button.disabled = false;
 
         buy.addEventListener('click', function() {
+            // Start the Bidali gift card selection UI
             bidaliSdk.Commerce.render({
                 apiKey: '<BIDALI_API_PUBLIC_KEY>',
                 paymentCurrencies: ['NIM'],
-                paymentType: 'prefill',
+                paymentType: 'prefill', // Let this app handle the transaction
                 onPaymentRequest: (paymentRequest) => {
+                    // Make sure users cannot click the main button again while we process the payment request
                     $button.disabled = true;
-                    const { address, amount, currency, description, chargeId } = paymentRequest;
+
+                    const { address, amount } = paymentRequest;
                     console.log('onPaymentRequest:', paymentRequest);
 
+                    // Instantiate a Nimiq Hub client
                     const hub = new HubApi('https://hub.nimiq.com');
+
+                    // Because the Bidali UI calls onPaymentRequest asynchronously, we cannot use a popup (popups can
+                    // only be opened in the context of a user action), so we have to use a redirect.
+                    //
+                    // We pass the result.html page as its returnUrl.
+                    // We store the paymentRequest object as data in the redirect, so the result.html page gets access
+                    // to it in its response handler.
                     const redirectBehavior = new HubApi.RedirectRequestBehavior(
                         `${window.location.origin}/result.html`, paymentRequest);
 
+                    // Finally, call checkout() with the request object
                     hub.checkout({
                         appName: 'nimiqgiftcards.com',
                         shopLogoUrl: `${window.location.origin}/shop-logo.png`,
                         recipient: address,
-                        value: amount * 1e5,
+                        value: amount * 1e5, // amount is in NIM, but the Hub expects Luna
                         extraData: 'nimiqgiftcards.com',
                         validityDuration: 29, // Bidali quote is valid for 30 minutes
-                    }, redirectBehavior);
+                    }, redirectBehavior); // Pass the redirectBehavior as the second argument
                 },
             });
         });
 
-        // Check for error passed in URL
+        // Check for error passed in URL when redirected from result.html
         const params = new URLSearchParams(window.location.hash.substring(1));
         if (params.has('error')) {
             const $error = document.getElementById('error');
