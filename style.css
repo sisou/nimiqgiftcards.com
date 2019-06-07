@@ -24,6 +24,24 @@ body {
 header {
     width: 100%;
     padding-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header svg {
+    vertical-align: middle;
+}
+
+header .github {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+header .github svg {
+    height: 2rem;
 }
 
 #logo {
