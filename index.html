@@ -90,7 +90,7 @@
                         shopLogoUrl: `${window.location.origin}/shop-logo.png`,
                         recipient: address,
                         value: amount * 1e5, // amount is in NIM, but the Hub expects Luna
-                        extraData: 'nimiqgiftcards.com',
+                        // extraData: 'nimiqgiftcards.com', // Apparently extra data in the transaction confuses Bidali/Changelly
                         validityDuration: 29, // Bidali quote is valid for 30 minutes
                     }, redirectBehavior); // Pass the redirectBehavior as the second argument
                 },
